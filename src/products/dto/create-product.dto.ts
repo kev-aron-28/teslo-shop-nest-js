@@ -39,3 +39,4 @@ export class CreateProductDto {
     @IsOptional()
     tags?: string[];
 }
+
