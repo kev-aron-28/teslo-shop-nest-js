@@ -1,4 +1,5 @@
 import { IsArray, IsIn, IsInt, IsNumber, IsOptional, IsPositive, IsString, MinLength } from "class-validator";
+import { ProductImage } from "../entities";
 
 export class CreateProductDto {
     @IsString()
@@ -38,5 +39,11 @@ export class CreateProductDto {
     })
     @IsOptional()
     tags?: string[];
+
+    @IsString({
+        each: true
+    })
+    @IsOptional()
+    images?: string[];
 }
 
